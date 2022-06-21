@@ -1,0 +1,193 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(40, 168, 100);
+  background: linear-gradient(
+    90deg,
+    rgba(40, 168, 100, 1) 5%,
+    rgba(36, 188, 200, 1) 50%,
+    rgba(40, 168, 100, 1) 95%
+  );
+}
+
+ol {
+  padding-left: 30px;
+  color: green;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid green;
+  border-style: revert;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+button:hover {
+  color: yellow;
+}
+
+.player-info {
+  font-size: 1rem;
+  text-shadow: 2px 2px #314a33;
+  font-weight: bold;
+  animation: blink 6s infinite;
+}
+
+.game-history-title {
+  border-bottom: 2px ridge green;
+}
+
+.board-squares {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: rgb(242, 255, 241);
+  border: 2px dashed greenyellow;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+  color: green;
+  cursor: grabbing;
+}
+
+.square:hover {
+  background-color: rgb(174, 203, 174);
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  padding: 10rem;
+  align-items: center;
+}
+
+.game-board {
+  width: 102px;
+  animation: fadeIn 5s;
+}
+
+.game-info {
+  margin-top: 25%;
+}
+
+.winner {
+  animation: color-rotate 5s infinite;
+  font-size: 1rem;
+  text-shadow: 2px 2px black;
+  font-weight: bold;
+}
+
+.new-game {
+  margin-bottom: 4rem;
+  background-color: rgb(52, 219, 52);
+  color: whitesmoke;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+@keyframes color-rotate {
+  0% {
+    color: red;
+  }
+  20% {
+    color: yellow;
+  }
+  40% {
+    color: rgb(0, 0, 0);
+  }
+  60% {
+    color: blue;
+  }
+  80% {
+    color: white;
+  }
+  100% {
+    color: red;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+    text-shadow: none;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
